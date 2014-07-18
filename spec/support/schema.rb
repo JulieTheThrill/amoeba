@@ -152,6 +152,10 @@ ActiveRecord::Schema.define do
     t.integer :category_id
     t.string :ramblings
     t.string :other_ramblings
+    t.boolean :super_cat
+    t.boolean :likes_milk
+    t.boolean :needs_brushing
+    t.boolean :plays_with_mice
     t.timestamps
   end
 

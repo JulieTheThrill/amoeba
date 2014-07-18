@@ -72,6 +72,14 @@ describe "amoeba" do
       new_post.supercats.map(&:ramblings).include?("Copy of zomg").should be true
       new_post.supercats.map(&:other_ramblings).uniq.length.should == 1
       new_post.supercats.map(&:other_ramblings).uniq.include?("La la la").should be true
+      new_post.supercats.map(&:super_cat).uniq.length.should == 1
+      new_post.supercats.map(&:super_cat).include?(false).should be true
+      new_post.supercats.map(&:likes_milk).uniq.length.should == 1
+      new_post.supercats.map(&:likes_milk).include?(false).should be true
+      new_post.supercats.map(&:needs_brushing).uniq.length.should == 1
+      new_post.supercats.map(&:needs_brushing).include?(false).should be false
+      new_post.supercats.map(&:plays_with_mice).uniq.length.should == 1
+      new_post.supercats.map(&:plays_with_mice).include?(nil).should be false
       new_post.title.should == "Copy of #{old_post.title}"
       new_post.contents.should == "Here's a copy: #{old_post.contents.gsub(/dog/, 'cat')} (copied version)"
       new_post.comments.length.should == 5

@@ -195,12 +195,12 @@ module Amoeba
 
           defs.each do |d|
             d.each do |k,v|
-              @coercions[k] = v if v
+              @coercions[k] = v unless v.nil?
             end
           end
         else
           defs.each do |k,v|
-            @coercions[k] = v if v
+            @coercions[k] = v unless v.nil?
           end
         end
         @coercions

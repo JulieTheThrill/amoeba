@@ -132,7 +132,9 @@ class Supercat < ActiveRecord::Base
   amoeba do
     include_field :superkittens
     prepend :ramblings => "Copy of "
-    set :other_ramblings => "La la la"
+    set [:other_ramblings => "La la la", :super_cat => false, :plays_with_mice => nil]
+    set :likes_milk => false
+    set :needs_brushing => nil
   end
 end
 

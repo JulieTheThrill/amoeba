@@ -66,9 +66,9 @@ c1 = Category.create(:title => "Umbrellas", :description => "Clown fart")
 c2 = Category.create(:title => "Widgets", :description => "Humpty dumpty")
 c3 = Category.create(:title => "Wombats", :description => "Slushy mushy")
 
-s1 = Supercat.create(:post => p1, :category => c1, :ramblings => "zomg", :other_ramblings => "nerp")
-s2 = Supercat.create(:post => p1, :category => c2, :ramblings => "why", :other_ramblings => "narp")
-s3 = Supercat.create(:post => p1, :category => c3, :ramblings => "ohnoes", :other_ramblings => "blap")
+s1 = Supercat.create(:post => p1, :category => c1, :ramblings => "zomg", :other_ramblings => "nerp", :super_cat => true, :likes_milk => true, :needs_brushing => true, :plays_with_mice => true)
+s2 = Supercat.create(:post => p1, :category => c2, :ramblings => "why", :other_ramblings => "narp", :super_cat => true, :likes_milk => true, :needs_brushing => true, :plays_with_mice => true)
+s3 = Supercat.create(:post => p1, :category => c3, :ramblings => "ohnoes", :other_ramblings => "blap", :super_cat => true, :likes_milk => true, :needs_brushing => true, :plays_with_mice => true)
 
 s1.superkittens.create(:value => "Fluffy")
 s1.superkittens.create(:value => "Buffy")
